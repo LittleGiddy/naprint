@@ -2,24 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --color-primary: #173D57;
+  --color-secondary: #F36D4D;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-gray-800;
+    background-color: white;
+    color: #1f2937;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    font-weight: bold;
   }
   section {
-    @apply py-16 md:py-20;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 768px) {
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
   }
 }
 
 @layer components {
   .container-custom {
-    @apply max-w-7xl mx-auto px-5 sm:px-8;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
 
